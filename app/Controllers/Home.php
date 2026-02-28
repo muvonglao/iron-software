@@ -13,9 +13,9 @@ class Home extends BaseController
         return view('pages/home', [
         'title' => $content['meta']['title'] ?? '',
         'metaDescription' => $content['meta']['description'] ?? '',
+        'nav' => $content['nav'] ?? [],
         'hero' => $content['hero'] ?? [],
-        'signup' => $content['signup'] ?? [],
-        'overview' => $content['overview'] ?? [],
+        'productOverview' => $content['productOverview'] ?? [],
         'why' => $content['why'] ?? [],
         'earlyAccess' => $content['earlyAccess'] ?? [],
         'bottomSignup' => $content['bottomSignup'] ?? [],
