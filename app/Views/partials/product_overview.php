@@ -1,20 +1,24 @@
 <section class="product-overview">
-  <div class="container">
-    <header class="product-overview__header">
-      <h2 class="product-overview__title"><?= esc($productOverview['title'] ?? '') ?></h2>
-      <span class="product-overview__badge"><?= esc($productOverview['badgeText'] ?? '') ?></span>
-    </header>
+  <div class="container product-overview__container">
+    <div class="row g-4 g-xl-5">
+      <div class="col-lg-5">
+        <h2 class="section-title product-overview__title mb-2"><?= esc($productOverview['title'] ?? '') ?></h2>
+        <span class="chip chip--coming-soon product-overview__badge"><?= esc($productOverview['badgeText'] ?? '') ?></span>
+      </div>
 
-    <ul class="product-overview__bullets">
-      <?php foreach (($productOverview['bullets'] ?? []) as $b): ?>
-        <li class="product-overview__bullet"><?= esc($b) ?></li>
-      <?php endforeach; ?>
-    </ul>
+      <div class="col-lg-7">
+        <ul class="product-overview__bullets list-unstyled mb-3">
+          <?php foreach (($productOverview['bullets'] ?? []) as $b): ?>
+            <li class="product-overview__bullet bullets-line"><?= esc($b) ?></li>
+          <?php endforeach; ?>
+        </ul>
 
-    <div class="product-overview__body">
-      <?php foreach (($productOverview['paragraphs'] ?? []) as $p): ?>
-        <p><?= esc($p) ?></p>
-      <?php endforeach; ?>
+        <div class="product-overview__body">
+          <?php foreach (($productOverview['paragraphs'] ?? []) as $p): ?>
+            <p class="mb-3"><?= esc($p) ?></p>
+          <?php endforeach; ?>
+        </div>
+      </div>
     </div>
   </div>
 </section>

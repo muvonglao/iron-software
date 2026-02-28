@@ -7,9 +7,7 @@
 
   "nav": {
     "brand": {
-      "primaryText": "IRON",
-      "secondaryText": "SOFTWARE",
-      "iconPath": "/assets/img/brand-mark.svg",
+      "iconPath": "/assets/img/iron-software-logo.svg",
       "iconAlt": "Iron Software",
       "href": "#",
       "ariaLabel": "Iron Software home"
@@ -34,7 +32,7 @@
 
   "hero": {
     "productLogo": {
-      "src": "/assets/img/ironpdf-for-cpp.png",
+      "src": "/assets/img/iron-pdf-for-cpp.svg",
       "alt": "IronPDF for C++"
     },
     "eyebrow": "Building on the success of IronPDF for .NET",
@@ -45,8 +43,7 @@
     "statusText": "Coming soon",
 
     "artwork": {
-      "backgroundPath": "/assets/img/hero-artwork-bg.png",
-      "productIconPath": "/assets/img/cpp-file-icon.png",
+      "backgroundPath": "/assets/img/hero-artwork-bg.webp",
       "alt": "C++ product artwork"
     },
 
