@@ -1,0 +1,25 @@
+{
+  "meta": {
+    "title": "Iron Software - Landing Page",
+    "description": "Pixel-perfect landing page implemented with CodeIgniter 4 + Bootstrap."
+  },
+  "hero": {
+    "title": "Build production-quality UI",
+    "subtitle": "Responsive, accessible, and optimized for performance.",
+    "ctaText": "Get Started"
+  },
+  "features": [
+    {
+      "title": "Pixel Perfect",
+      "desc": "Accurate spacing and typography from Figma."
+    },
+    {
+      "title": "Responsive",
+      "desc": "Works across breakpoints even without mobile design."
+    },
+    {
+      "title": "QA Mindset",
+      "desc": "Checklist-driven validation and Lighthouse checks."
+    }
+  ]
+}
