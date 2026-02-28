@@ -5,11 +5,11 @@
     sans-serif;
 
   /* ---------- Typography: Font weights ---------- */
-  --fw-light: 300; /* Gotham Light */
-  --fw-regular: 400; /* Gotham Book/Regular */
-  --fw-medium: 500; /* Gotham Medium */
-  --fw-bold: 700; /* Gotham Bold */
-  --fw-black: 900; /* Gotham Black */
+  --fw-light: 300;
+  --fw-regular: 400;
+  --fw-medium: 500;
+  --fw-bold: 700;
+  --fw-black: 800;
 
   /* ---------- Typography: Font sizes ---------- */
   --fs-nav: 11px;
@@ -20,17 +20,16 @@
   --fs-button: 16px; /* button label */
 
   --fs-h1: 50px; /* Hero H1 (Beta Software Program) */
-  --fs-h1b: 50px; /* Hero H1 line2 (IronPDF for C++) same size, diff color */
   --fs-h2: 40px; /* Section headings (e.g., IronPDF for C++, Why..., Early Access...) */
 
   /* ---------- Typography: Line heights ---------- */
-  --lh-nav: normal; /* Figma auto */
+  --lh-nav: 13px;
   --lh-chip: 28px;
   --lh-body: 28px;
   --lh-bullets: 26px;
-  --lh-button: 1; /* practical; tight label */
-  --lh-h1: normal; /* Figma auto */
-  --lh-h2: normal; /* Figma auto */
+  --lh-button: 19px;
+  --lh-h1: 54px;
+  --lh-h2: 44px;
 
   /* ---------- Colors ---------- */
   --c-white: #ffffff;
@@ -38,7 +37,7 @@
   --c-released: #331433; /* chip released text color */
 
   /* Optional: page foundation (tune later in pixel step) */
-  --c-bg: #2a0f2a; /* safe placeholder background */
+  --c-bg: #2c0f29; /* safe placeholder background */
   --c-surface: #331433; /* safe surface tone */
   --c-signup-grad-start: #8e608e;
   --c-signup-grad-mid: #402640;
@@ -147,12 +146,14 @@ a {
 }
 
 /* Nav link helper */
-.nav-link {
+.site-header .nav-link {
+  font-family: var(--type-nav-font);
   font-size: var(--type-nav-size);
   line-height: var(--type-nav-line);
   font-weight: var(--type-nav-weight);
   color: var(--type-nav-color);
-  letter-spacing: normal;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
 }
 
 /* Hero */
@@ -164,6 +165,7 @@ a {
 }
 
 .hero__title {
+  font-family: var(--type-h1-font);
   font-size: var(--type-h1-size);
   line-height: var(--type-h1-line);
   font-weight: var(--type-h1-weight);
@@ -216,13 +218,8 @@ a {
 
 /* Header */
 
-.site-header .navbar {
-  min-height: 84px;
-}
-
 .site-header__container {
-  padding-left: 24px;
-  padding-right: 24px;
+  padding: 15px 24px 15px 24px;
 }
 
 .site-header__brand {
@@ -244,11 +241,6 @@ a {
   display: block;
   width: 115px;
   height: 15px;
-}
-
-.site-header__links {
-  margin-left: 34px;
-  gap: 8px;
 }
 
 .site-header__item {
@@ -313,7 +305,6 @@ a {
 /* Hero + Product overview */
 .hero-section {
   position: relative;
-  background: var(--c-surface);
   overflow: visible;
   z-index: 2;
   isolation: isolate;
@@ -358,10 +349,10 @@ a {
 }
 
 .hero-section__status {
-  font-size: 24px;
-  line-height: 1.2;
-  font-weight: var(--fw-regular);
-  color: rgba(255, 255, 255, 0.35);
+  font-size: var(--fs-chip);
+  line-height: var(--lh-chip);
+  font-weight: var(--fw-light);
+  color: #8f618f;
 }
 
 .hero-section__right {
@@ -371,7 +362,7 @@ a {
 .hero-section__art-wrap {
   position: absolute;
   right: -100px;
-  top: -315px;
+  top: -289px;
   z-index: 4;
   pointer-events: none;
 }
