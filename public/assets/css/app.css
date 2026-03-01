@@ -47,6 +47,8 @@
   --c-signup-chip-text: #7a5f84;
   --c-coming-soon-text: #8f618f;
   --c-placeholder: #431f43;
+  --c-chip-fill: rgba(23, 6, 23, 0.8);
+  --c-overlay-base: #170617;
 
   /* ---------- Text color tokens ---------- */
   --text-primary: var(--c-white);
@@ -433,7 +435,7 @@ p {
 .hero-signup__input-group {
   --hero-signup-input-font-size: 22px;
   --hero-signup-input-padding-y: 0;
-  --hero-signup-input-padding-x: 22px;
+  --hero-signup-input-padding-x: 26px;
   background: #dfdce0;
   width: 530px;
   max-width: 100%;
@@ -618,7 +620,7 @@ p {
 .product-overview__body-wrap::after {
   content: "";
   position: absolute;
-  left: 45%;
+  left: 50%;
   top: 50%;
   width: 100%;
   height: 700px;
@@ -653,7 +655,6 @@ p {
   background: var(--c-signup-grad-mid);
 }
 
-
 .why__grid {
   display: grid;
   grid-template-columns: 230px minmax(0, 1fr);
@@ -687,60 +688,169 @@ p {
 }
 
 .early-access {
+  position: relative;
   background: var(--c-bg);
-  padding: 54px 0 70px;
+  padding-top: 60px;
+  padding-bottom: 60px;
+  overflow: hidden;
+  z-index: 0;
+}
+
+.early-access::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 100%;
+  height: 700px;
+  transform: translate(-50%, -50%);
+  background: url("/assets/img/product-overview-gradient.webp") center/100% 100%
+    no-repeat;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.early-access > .container {
+  position: relative;
+  z-index: 2;
 }
 
 .early-access__title {
-  margin-bottom: 20px;
-}
-
-.early-access__text {
-  color: var(--text-primary-muted);
-  max-width: 1030px;
+  margin-bottom: 30px;
 }
 
 .early-access__chips {
-  display: flex;
-  align-items: center;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  align-items: stretch;
   gap: 14px;
-  margin-top: 28px;
-  flex-wrap: wrap;
+  margin-top: 30px;
 }
 
 .early-access__chip {
-  min-width: 270px;
-  height: 62px;
+  width: 100%;
+  min-width: 0;
+  height: 88px;
   border-radius: 999px;
-  border: 1px solid var(--c-signup-grad-mid);
-  background: var(--c-surface);
-  padding: 0 18px;
-  display: inline-flex;
+  box-sizing: border-box;
+  background: var(--c-chip-fill);
+  padding: 0 26px;
+  display: flex;
   align-items: center;
-  gap: 16px;
+  gap: 18px;
+}
+
+.early-access__chip--released {
+  border: 3px solid var(--c-placeholder);
+}
+
+.early-access__chip--coming {
+  border: 3px solid var(--c-surface);
 }
 
 .early-access__chip-status {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  height: 30px;
-  min-width: 92px;
-  padding: 0 14px;
+  width: auto;
+  min-width: 127px;
+  height: 36px;
+  padding: 0 12px;
   border-radius: 999px;
-  background: var(--c-signup-chip-bg);
+  background: var(--c-accent);
   color: var(--type-chip-color-released);
   font-family: var(--type-chip-font);
   font-size: var(--type-chip-size);
   line-height: 1;
   font-weight: var(--type-chip-weight);
+  white-space: nowrap;
+}
+
+.early-access__chip-status--released {
+  background: var(--c-accent);
+  color: var(--type-chip-color-released);
+}
+
+.early-access__chip-status--coming {
+  background: var(--c-surface);
+  color: var(--c-accent);
 }
 
 .early-access__chip-logo {
   display: block;
   width: auto;
-  height: 34px;
-  max-width: 130px;
+  height: 42px;
+  max-width: 160px;
+}
+
+.beta-signup {
+  position: relative;
+  background: var(--c-bg);
+  padding-top: 60px;
+  padding-bottom: 60px;
+  z-index: 0;
+}
+
+.beta-signup::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: var(--c-overlay-base);
+  opacity: 0.3;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.beta-signup__container {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+}
+
+.beta-signup__title {
+  font-size: 30px;
+  line-height: 34px;
+  margin-bottom: 24px;
+}
+
+.beta-signup__form {
+  display: flex;
+  justify-content: center;
+}
+
+.beta-signup__input-group {
+  --hero-signup-input-font-size: 22px;
+  --hero-signup-input-padding-y: 0;
+  --hero-signup-input-padding-x: 26px;
+  width: 600px;
+  max-width: 100%;
+  height: 56px;
+  border-width: 2px;
+  border-color: #e7eef0;
+  background: #ffffff;
+}
+
+.beta-signup__input {
+  background: #ffffff;
+  font-size: 14px !important;
+  line-height: 1.2;
+  font-weight: var(--fw-medium);
+  color: #000000;
+}
+
+.beta-signup__input.form-control::placeholder {
+  color: #000000;
+  font-size: 14px;
+  line-height: 1;
+  transform: none;
+}
+
+.beta-signup__button.btn {
+  width: 186px;
+  min-width: 186px;
+  max-width: 186px;
+  font-size: var(--fs-button);
+  line-height: var(--type-button-line);
 }
 
 /* Responsive */
@@ -869,10 +979,37 @@ p {
   .early-access__chips {
     margin-top: 20px;
     gap: 10px;
+    grid-template-columns: 1fr;
   }
 
   .early-access__chip {
+    height: 80px;
+    padding: 0 20px;
+  }
+
+  .early-access__chip-status {
+    width: 120px;
+    min-width: 120px;
+  }
+
+  .beta-signup {
+    padding: 34px 0 42px;
+  }
+
+  .beta-signup__title {
+    margin-bottom: 18px;
+  }
+
+  .beta-signup__input-group {
+    --hero-signup-input-padding-x: 22px;
     width: 100%;
-    min-width: 0;
+    height: 56px;
+  }
+
+  .beta-signup__button.btn {
+    width: 132px;
+    min-width: 132px;
+    max-width: 132px;
+    font-size: var(--fs-button);
   }
 }

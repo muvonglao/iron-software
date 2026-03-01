@@ -17,8 +17,11 @@
 
     <div class="early-access__chips" role="list">
       <?php foreach (($earlyAccess['chips'] ?? []) as $chip): ?>
-        <div class="early-access__chip" role="listitem">
-          <span class="early-access__chip-status"># <?= esc($chip['status'] ?? '') ?></span>
+        <?php $status = trim((string) ($chip['status'] ?? '')); ?>
+        <?php $chipClass = stripos($status, 'coming') !== false ? 'early-access__chip--coming' : 'early-access__chip--released'; ?>
+        <?php $statusClass = stripos($status, 'coming') !== false ? 'early-access__chip-status--coming' : 'early-access__chip-status--released'; ?>
+        <div class="early-access__chip <?= esc($chipClass) ?>" role="listitem">
+          <span class="early-access__chip-status <?= esc($statusClass) ?>"># <?= esc($status) ?></span>
           <?php if (!empty($chip['logo']['src'])): ?>
             <img
               class="early-access__chip-logo"

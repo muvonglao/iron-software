@@ -125,6 +125,7 @@
 
   "bottomSignup": {
     "title": "Sign up to our Beta Program",
+    "titleHighlight": "Beta Program",
     "emailPlaceholder": "Enter email address",
     "ctaText": "Sign up now",
     "ctaHref": "#",
