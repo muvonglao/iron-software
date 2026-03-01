@@ -400,7 +400,7 @@ p {
 
 .hero-section__art-wrap {
   position: absolute;
-  right: calc((100vw - 253.2%) / -2);
+  right: calc((min(100vw, 1600px) - 253.2%) / -2);
   top: -254px;
   z-index: 4;
   pointer-events: none;
@@ -786,8 +786,8 @@ p {
 .beta-signup {
   position: relative;
   background: var(--c-bg);
-  padding-top: 60px;
-  padding-bottom: 60px;
+  padding-top: 40px;
+  padding-bottom: 40px;
   z-index: 0;
 }
 
