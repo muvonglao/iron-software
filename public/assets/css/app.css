@@ -626,7 +626,7 @@ p {
   left: 50%;
   width: 100vw;
   transform: translateX(-50%);
-  background: #000000;
+  background: var(--c-overlay-base);
   opacity: 0.3;
   pointer-events: none;
   z-index: 0;
@@ -966,6 +966,11 @@ p {
 }
 
 @media (max-width: 991.98px) {
+  .container {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
   .site-header .navbar {
     min-height: 72px;
   }
