@@ -1,6 +1,6 @@
-<section class="why">
+<section class="why ">
   <div class="container">
-    <div class="why__grid">
+    <div class="why__grid container">
       <div class="why__media">
         <?php if (!empty($why['image']['src'])): ?>
           <img
@@ -12,10 +12,21 @@
       </div>
 
       <div class="why__content">
-        <h2 class="why__title"><?= esc($why['title'] ?? '') ?></h2>
+        <?php $whyTitle = $why['title'] ?? ''; ?>
+        <?php $whyTitleHighlight = 'C++ PDF Library'; ?>
+        <?php if ($whyTitle !== '' && strpos($whyTitle, $whyTitleHighlight) !== false): ?>
+          <?php $startPos = strpos($whyTitle, $whyTitleHighlight); ?>
+          <?php $before = substr($whyTitle, 0, $startPos); ?>
+          <?php $after = substr($whyTitle, $startPos + strlen($whyTitleHighlight)); ?>
+          <h2 class="why__title"><?= esc($before) ?><span class="text-accent"><?= esc($whyTitleHighlight) ?></span><?= esc($after) ?></h2>
+        <?php else: ?>
+          <h2 class="why__title"><?= esc($whyTitle) ?></h2>
+        <?php endif; ?>
 
-        <?php foreach (($why['paragraphs'] ?? []) as $p): ?>
-          <p class="why__text"><?= esc($p) ?></p>
+        <?php $paragraphs = $why['paragraphs'] ?? []; ?>
+        <?php foreach ($paragraphs as $index => $p): ?>
+          <?php $isLast = $index === array_key_last($paragraphs); ?>
+          <p class="<?= $isLast ? '' : 'mb-3' ?>"><?= esc($p) ?></p>
         <?php endforeach; ?>
       </div>
     </div>

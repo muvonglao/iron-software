@@ -83,8 +83,8 @@
   "why": {
     "title": "Why make a C++ PDF Library",
     "image": {
-      "src": "/assets/img/why-icons.png",
-      "alt": "HTML and PDF icons"
+      "src": "/assets/img/html-to-pdf.webp",
+      "alt": "HTML to PDF flow icons"
     },
     "paragraphs": [
       "C++ is one of the most popular, oldest, and important programming languages in use, being the language of choice in low-level systems and network programming and other domains where performance is critical.",
@@ -94,13 +94,32 @@
 
   "earlyAccess": {
     "title": "Early Access to C++ PDF Library",
+    "titleHighlight": "C++ PDF Library",
     "paragraphs": [
       "Joining the early access program will allow you to collaborate closely with our engineering team. You will be playing a key role in the development process as you share your early experiences using the C++ PDF library before its official launch. Your continual feedback after we release the library will be immensely helpful as we release new features and improve on existing features."
     ],
     "chips": [
-      { "status": "Released", "product": "IRONPDF", "suffix": "for Java" },
-      { "status": "Coming Soon", "product": "IRONPDF", "suffix": "for Python" },
-      { "status": "Coming Soon", "product": "IRONPDF", "suffix": "for Node.js" }
+      {
+        "status": "Released",
+        "logo": {
+          "src": "/assets/img/iron-pdf-for-java.svg",
+          "alt": "IronPDF for Java"
+        }
+      },
+      {
+        "status": "Coming Soon",
+        "logo": {
+          "src": "/assets/img/iron-pdf-for-python.svg",
+          "alt": "IronPDF for Python"
+        }
+      },
+      {
+        "status": "Coming Soon",
+        "logo": {
+          "src": "/assets/img/iron-pdf-for-nodejs.svg",
+          "alt": "IronPDF for Node.js"
+        }
+      }
     ]
   },
 

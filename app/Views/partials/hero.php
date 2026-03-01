@@ -44,7 +44,7 @@
     <div class="container">
       <div class="row">
         <div class="col-xl-8">
-          <h2 class="hero-signup__title mb-2"><?= esc($signup['title'] ?? '') ?></h2>
+          <h2 class="hero-signup__title mb-3"><?= esc($signup['title'] ?? '') ?></h2>
           <p class="hero-signup__subtitle mb-4"><?= esc($signup['subtitle'] ?? '') ?></p>
 
           <form class="hero-signup__form mb-4" action="#" method="post">
