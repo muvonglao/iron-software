@@ -44,10 +44,10 @@
     <div class="container">
       <div class="row">
         <div class="col-xl-8">
-          <h2 class="hero-signup__title mb-1"><?= esc($signup['title'] ?? '') ?></h2>
-          <p class="hero-signup__subtitle mb-3"><?= esc($signup['subtitle'] ?? '') ?></p>
+          <h2 class="hero-signup__title mb-2"><?= esc($signup['title'] ?? '') ?></h2>
+          <p class="hero-signup__subtitle mb-4"><?= esc($signup['subtitle'] ?? '') ?></p>
 
-          <form class="hero-signup__form" action="#" method="post">
+          <form class="hero-signup__form mb-4" action="#" method="post">
             <label class="visually-hidden" for="email-hero">Email address</label>
             <div class="input-group hero-signup__input-group">
               <input
@@ -65,7 +65,7 @@
           </form>
 
           <?php $note = $signup['helperNote'] ?? []; ?>
-          <div class="hero-signup__note mt-3">
+          <div class="hero-signup__note">
             <span class="hero-signup__tag"><?= esc($note['tagText'] ?? '') ?></span>
             <span class="hero-signup__note-text">
               <?= esc($note['textPrefix'] ?? '') ?>
