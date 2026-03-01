@@ -53,7 +53,6 @@
   /* ---------- Text color tokens ---------- */
   --text-primary: var(--c-white);
   --text-accent: var(--c-accent);
-  --text-primary-muted: rgba(255, 255, 255, 0.84);
 
   /* ---------- Type tokens (semantic) ---------- */
   /* Nav link */
@@ -223,25 +222,6 @@ p {
   color: var(--text-accent);
 }
 
-/* Nav link helper */
-.site-header .nav-link {
-  font-family: var(--type-nav-font);
-  font-size: var(--type-nav-size);
-  line-height: var(--type-nav-line);
-  font-weight: var(--type-nav-weight);
-  color: var(--type-nav-color);
-  letter-spacing: 0.05em;
-  text-transform: uppercase;
-}
-
-/* Bullets line row */
-.bullets-line {
-  font-size: var(--type-bullets-size);
-  line-height: var(--type-bullets-line);
-  font-weight: var(--type-bullets-weight);
-  color: var(--type-bullets-color);
-}
-
 /* Button label */
 .btn__label {
   font-size: var(--type-button-size);
@@ -267,6 +247,15 @@ p {
 }
 
 /* Header */
+
+.site-header .navbar {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+.site-header__links {
+  margin-bottom: 0;
+}
 
 .site-header__container {
   padding: 5px 12px 5px 12px;
@@ -384,7 +373,15 @@ p {
   line-height: var(--type-eyebrow-line);
   font-weight: var(--type-eyebrow-weight);
   color: var(--type-eyebrow-color);
-  margin-bottom: 14px;
+  margin-bottom: 0.5rem;
+}
+
+.hero__title {
+  margin-bottom: 1rem;
+}
+
+.hero__title span {
+  display: block;
 }
 
 .hero-section__status {
@@ -392,6 +389,7 @@ p {
   line-height: var(--lh-chip);
   font-weight: var(--fw-light);
   color: #8f618f;
+  margin-bottom: 0;
 }
 
 .hero-section__right {
@@ -425,11 +423,20 @@ p {
   padding: 55px 0 55px;
 }
 
+.hero-signup__title {
+  margin-bottom: 1rem; /* was mb-3 */
+}
+
 .hero-signup__subtitle {
   font-size: var(--type-eyebrow-size);
   line-height: var(--type-eyebrow-line);
   font-weight: var(--type-eyebrow-weight);
   color: var(--type-eyebrow-color);
+  margin-bottom: 1.5rem; /* was mb-4 */
+}
+
+.hero-signup__form {
+  margin-bottom: 1.5rem; /* was mb-4 */
 }
 
 .hero-signup__input-group {
@@ -520,7 +527,6 @@ p {
 }
 
 .hero-signup__note-text {
-  color: var(--text-primary-muted);
   font-family: var(--type-body-font);
   font-size: var(--type-body-size);
   line-height: var(--type-body-line);
@@ -571,6 +577,7 @@ p {
 
 .product-overview__bullets {
   margin: 0;
+  list-style: none;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -584,7 +591,6 @@ p {
   justify-content: flex-start;
   gap: 12px;
   margin-bottom: 0;
-  color: var(--text-primary-muted);
 }
 
 .product-overview__bullet:not(:last-child) {
@@ -641,9 +647,12 @@ p {
 }
 
 .product-overview__body p {
-  color: var(--text-primary-muted);
   font-weight: var(--fw-light);
   margin-bottom: 0;
+}
+
+.product-overview__body p:not(:last-child) {
+  margin-bottom: 1rem;
 }
 
 .product-overview__body p strong {
@@ -679,12 +688,8 @@ p {
   margin-bottom: 16px;
 }
 
-.why__text {
-  color: var(--text-primary-muted);
-}
-
 .why__text + .why__text {
-  margin-top: 12px;
+  margin-top: 1rem;
 }
 
 .early-access {

@@ -25,8 +25,7 @@
 
         <?php $paragraphs = $why['paragraphs'] ?? []; ?>
         <?php foreach ($paragraphs as $index => $p): ?>
-          <?php $isLast = $index === array_key_last($paragraphs); ?>
-          <p class="<?= $isLast ? '' : 'mb-3' ?>"><?= esc($p) ?></p>
+          <p class="why__text"><?= esc($p) ?></p>
         <?php endforeach; ?>
       </div>
     </div>

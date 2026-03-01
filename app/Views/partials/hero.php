@@ -13,14 +13,14 @@
             />
           <?php endif; ?>
 
-          <p class="hero__eyebrow mb-2"><?= esc($hero['eyebrow'] ?? '') ?></p>
+          <p class="hero__eyebrow"><?= esc($hero['eyebrow'] ?? '') ?></p>
 
-          <h1 class="hero__title mb-3">
-            <span class="d-block"><?= esc($hero['headline']['line1'] ?? '') ?></span>
-            <span class="d-block accent"><?= esc($hero['headline']['line2'] ?? '') ?></span>
+          <h1 class="hero__title">
+            <span><?= esc($hero['headline']['line1'] ?? '') ?></span>
+            <span class="accent"><?= esc($hero['headline']['line2'] ?? '') ?></span>
           </h1>
 
-          <p class="hero-section__status mb-0"><?= esc($hero['statusText'] ?? '') ?></p>
+          <p class="hero-section__status"><?= esc($hero['statusText'] ?? '') ?></p>
         </div>
       </div>
 
@@ -44,10 +44,10 @@
     <div class="container">
       <div class="row">
         <div class="col-xl-8">
-          <h2 class="hero-signup__title mb-3"><?= esc($signup['title'] ?? '') ?></h2>
-          <p class="hero-signup__subtitle mb-4"><?= esc($signup['subtitle'] ?? '') ?></p>
+          <h2 class="hero-signup__title"><?= esc($signup['title'] ?? '') ?></h2>
+          <p class="hero-signup__subtitle"><?= esc($signup['subtitle'] ?? '') ?></p>
 
-          <form class="hero-signup__form mb-4" action="#" method="post">
+          <form class="hero-signup__form" action="#" method="post">
             <label class="visually-hidden" for="email-hero">Email address</label>
             <div class="input-group hero-signup__input-group">
               <input

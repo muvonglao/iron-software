@@ -1,5 +1,5 @@
 <header class="site-header">
-  <nav class="navbar navbar-expand-lg py-0" aria-label="Primary">
+  <nav class="navbar navbar-expand-lg" aria-label="Primary">
     <div class="container-fluid site-header__container">
       <a class="navbar-brand site-header__brand" href="<?= esc($nav['brand']['href'] ?? '#') ?>"
          aria-label="<?= esc($nav['brand']['ariaLabel'] ?? 'Home') ?>">
@@ -22,7 +22,7 @@
       </button>
 
       <div class="collapse navbar-collapse" id="primaryNavbar">
-        <ul class="navbar-nav site-header__links mb-0">
+        <ul class="navbar-nav site-header__links">
           <?php foreach (($nav['links'] ?? []) as $index => $link): ?>
             <?php if (($link['type'] ?? '') === 'dropdown'): ?>
               <?php $dropdownId = 'navDropdown' . $index; ?>

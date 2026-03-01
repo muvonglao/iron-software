@@ -14,7 +14,7 @@
       <?php endif; ?>
     </div>
 
-    <ul class="container product-overview__bullets list-unstyled mb-0">
+    <ul class="product-overview__bullets container">
       <?php foreach (($productOverview['bullets'] ?? []) as $b): ?>
         <li class="product-overview__bullet bullets-line"><?= esc($b) ?></li>
       <?php endforeach; ?>
@@ -30,14 +30,13 @@
         ?>
         <?php foreach ($paragraphs as $index => $p): ?>
           <?php $highlight = $paragraphHighlights[$index] ?? ''; ?>
-          <?php $isLast = $index === array_key_last($paragraphs); ?>
           <?php if ($highlight !== '' && strpos($p, $highlight) !== false): ?>
             <?php $startPos = strpos($p, $highlight); ?>
             <?php $before = substr($p, 0, $startPos); ?>
             <?php $after = substr($p, $startPos + strlen($highlight)); ?>
-            <p class="<?= $isLast ? '' : 'mb-3' ?>"><?= esc($before) ?><strong><?= esc($highlight) ?></strong><?= esc($after) ?></p>
+            <p><?= esc($before) ?><strong><?= esc($highlight) ?></strong><?= esc($after) ?></p>
           <?php else: ?>
-            <p class="<?= $isLast ? '' : 'mb-3' ?>"><?= esc($p) ?></p>
+            <p><?= esc($p) ?></p>
           <?php endif; ?>
         <?php endforeach; ?>
       </div>
