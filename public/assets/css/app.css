@@ -399,14 +399,15 @@ p {
 .hero-section__art-wrap {
   position: absolute;
   right: calc((min(100vw, 1600px) - 253.2%) / -2);
-  top: -254px;
+  top: -330px;
+  left: -157px;
   z-index: 4;
   pointer-events: none;
 }
 
 .hero-section__art {
-  width: 805px;
-  height: 710px;
+  width: 880px;
+  height: 100%;
   object-fit: cover;
   object-position: left center;
 }
@@ -535,7 +536,7 @@ p {
 
 .hero-signup__note-text strong {
   color: var(--text-primary);
-  font-weight: var(--fw-medium);
+  font-weight: var(--fw-bold);
 }
 
 .product-overview {
