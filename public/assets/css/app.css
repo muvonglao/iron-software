@@ -42,7 +42,7 @@
   --c-signup-grad-start: #8e608e;
   --c-signup-grad-mid: #402640;
   --c-signup-grad-end: #371a34;
-  --c-signup-cta: #e40f62;
+  --c-signup-cta: #e01a59;
   --c-signup-chip-bg: #c8b0cf;
   --c-signup-chip-text: #7a5f84;
 
@@ -140,7 +140,73 @@ a {
   text-decoration: none;
 }
 
-/* Accent helper (คำท้ายสีม่วง) */
+/* =========================
+   Base Typography Mapping
+   ========================= */
+
+/* Body text */
+
+h1 {
+  font-family: var(--type-h1-font);
+  font-size: var(--type-h1-size);
+  line-height: var(--type-h1-line);
+  font-weight: var(--type-h1-weight);
+  color: var(--type-h1-color);
+}
+
+h2 {
+  font-family: var(--type-h2-font);
+  font-size: var(--type-h2-size);
+  line-height: var(--type-h2-line);
+  font-weight: var(--type-h2-weight);
+  color: var(--type-h2-color);
+}
+
+p {
+  font-family: var(--type-body-font);
+  font-size: var(--type-body-size);
+  line-height: var(--type-body-line);
+  font-weight: var(--type-body-weight);
+  color: var(--type-body-color);
+  margin: 0;
+}
+
+/* Bullets / small rows */
+.bullets-line {
+  font-family: var(--type-bullets-font);
+  font-size: var(--type-bullets-size);
+  line-height: var(--type-bullets-line);
+  font-weight: var(--type-bullets-weight);
+  color: var(--type-bullets-color);
+}
+
+/* Buttons (ถ้าใช้ bootstrap .btn) */
+.btn,
+.btn .btn__label {
+  font-family: var(--type-button-font);
+  font-size: var(--type-button-size);
+  line-height: var(--type-button-line);
+  font-weight: var(--type-button-weight);
+  color: var(--type-button-color);
+}
+
+/* Nav links (scoped) */
+.site-header .nav-link {
+  font-family: var(--type-nav-font);
+  font-size: var(--type-nav-size);
+  line-height: var(--type-nav-line);
+  font-weight: var(--type-nav-weight);
+  color: var(--type-nav-color);
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+/* Accent helper */
+
+.accent {
+  color: var(--type-h1b-color);
+}
+
 .text-accent {
   color: var(--text-accent);
 }
@@ -154,34 +220,6 @@ a {
   color: var(--type-nav-color);
   letter-spacing: 0.05em;
   text-transform: uppercase;
-}
-
-/* Hero */
-.hero__eyebrow {
-  font-size: var(--type-eyebrow-size);
-  line-height: var(--type-eyebrow-line);
-  font-weight: var(--type-eyebrow-weight);
-  color: var(--type-eyebrow-color);
-}
-
-.hero__title {
-  font-family: var(--type-h1-font);
-  font-size: var(--type-h1-size);
-  line-height: var(--type-h1-line);
-  font-weight: var(--type-h1-weight);
-  color: var(--type-h1-color);
-}
-
-.hero__title--accent {
-  color: var(--type-h1b-color);
-}
-
-/* Section heading */
-.section-title {
-  font-size: var(--type-h2-size);
-  line-height: var(--type-h2-line);
-  font-weight: var(--type-h2-weight);
-  color: var(--type-h2-color);
 }
 
 /* Bullets line row */
@@ -219,7 +257,7 @@ a {
 /* Header */
 
 .site-header__container {
-  padding: 15px 24px 15px 24px;
+  padding: 5px 12px 5px 12px;
 }
 
 .site-header__brand {
@@ -302,7 +340,8 @@ a {
   filter: invert(100%);
 }
 
-/* Hero + Product overview */
+/* Hero */
+
 .hero-section {
   position: relative;
   overflow: visible;
@@ -313,13 +352,8 @@ a {
 .hero-section__container {
   position: relative;
   z-index: 2;
-  padding-top: 44px;
-  padding-bottom: 30px;
-}
-
-.hero-section__top {
-  position: relative;
-  min-height: 420px;
+  padding-top: 80px;
+  padding-bottom: 35px;
 }
 
 .hero-section__content {
@@ -330,22 +364,15 @@ a {
   width: 255px;
   max-width: 100%;
   height: auto;
-  margin-bottom: 24px;
+  margin-bottom: 40px;
 }
 
 .hero__eyebrow {
+  font-size: var(--type-eyebrow-size);
+  line-height: var(--type-eyebrow-line);
+  font-weight: var(--type-eyebrow-weight);
+  color: var(--type-eyebrow-color);
   margin-bottom: 14px;
-}
-
-.hero__title {
-  font-family: var(--type-h1-font);
-  font-size: clamp(38px, 5vw, var(--type-h1-size));
-  line-height: 1.04;
-  font-weight: var(--type-h1-weight);
-}
-
-.hero__title--accent {
-  color: var(--type-h1b-color);
 }
 
 .hero-section__status {
@@ -361,8 +388,8 @@ a {
 
 .hero-section__art-wrap {
   position: absolute;
-  right: -100px;
-  top: -289px;
+  right: calc((100vw - 253.2%) / -2);
+  top: -254px;
   z-index: 4;
   pointer-events: none;
 }
@@ -386,36 +413,32 @@ a {
   padding: 34px 0 42px;
 }
 
-.hero-signup__title {
-  font-family: var(--font-sans);
-  font-size: 52px;
-  line-height: 1;
-  font-weight: var(--fw-black);
-  color: var(--c-white);
-}
-
 .hero-signup__subtitle {
-  font-size: 34px;
-  line-height: 1.12;
-  font-weight: var(--fw-bold);
-  color: var(--c-white);
+  font-size: var(--type-eyebrow-size);
+  line-height: var(--type-eyebrow-line);
+  font-weight: var(--type-eyebrow-weight);
+  color: var(--type-eyebrow-color);
 }
 
 .hero-signup__input-group {
   background: #dfdce0;
-  border: 3px solid rgba(255, 255, 255, 0.5);
-  border-radius: 42px;
+  width: 530px;
+  max-width: 100%;
+  height: 64px;
+  border: 2px solid var(--c-accent);
+  border-radius: 32px;
   overflow: hidden;
 }
 
 .hero-signup__input.form-control {
   background: transparent;
   border: 0;
+  height: 100%;
   color: var(--c-surface);
   font-size: 22px;
   line-height: 1.2;
   font-weight: var(--fw-medium);
-  padding: 22px 32px;
+  padding: 0 22px;
 }
 
 .hero-signup__input.form-control::placeholder {
@@ -428,19 +451,32 @@ a {
 
 .hero-signup__button.btn {
   border: 0;
-  border-radius: 34px;
-  margin: 5px;
-  padding: 0 44px;
+  border-radius: 0;
+  margin: 0;
+  width: 180px;
+  min-width: 180px;
+  max-width: 180px;
+  height: 100%;
+  padding: 0;
   background: var(--c-signup-cta);
   color: var(--c-white);
-  font-size: var(--type-button-size);
+  font-size: var(--fs-button);
   line-height: var(--type-button-line);
   font-weight: var(--type-button-weight);
-  text-transform: lowercase;
+}
+
+.hero-signup__input-group > .hero-signup__button.btn,
+.hero-signup__input-group > .hero-signup__button.btn:last-child,
+.hero-signup__input-group > .hero-signup__button.btn:not(:first-child) {
+  margin-left: 0 !important;
+  border-top-left-radius: 30px !important;
+  border-bottom-left-radius: 30px !important;
+  border-top-right-radius: 30px !important;
+  border-bottom-right-radius: 30px !important;
 }
 
 .hero-signup__button.btn::after {
-  content: " ›";
+  content: "▸";
 }
 
 .hero-signup__note {
@@ -537,18 +573,18 @@ a {
   }
 
   .hero-section__art-wrap {
-    position: relative;
-    right: auto;
-    top: auto;
-    width: 100%;
-    height: auto;
+    position: absolute;
+    right: calc((100vw - 100%) / -2);
+    top: -225px;
+    width: 805px;
+    height: 710px;
     margin-top: 0;
   }
 
   .hero-section__art {
-    width: 100%;
-    height: auto;
-    max-width: 540px;
+    width: 805px;
+    height: 710px;
+    max-width: none;
   }
 
   .hero-signup {
@@ -569,7 +605,7 @@ a {
   }
 
   .hero-signup__button.btn {
-    margin: 4px;
+    margin: 0;
     padding: 0 20px;
   }
 

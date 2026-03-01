@@ -43,7 +43,7 @@
     "statusText": "Coming soon",
 
     "artwork": {
-      "backgroundPath": "/assets/img/hero-artwork-bg.webp",
+      "backgroundPath": "/assets/img/cpp-pdf-hero-artwork-bg.webp",
       "alt": "C++ product artwork"
     },
 

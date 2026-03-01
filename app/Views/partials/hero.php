@@ -17,7 +17,7 @@
 
           <h1 class="hero__title mb-3">
             <span class="d-block"><?= esc($hero['headline']['line1'] ?? '') ?></span>
-            <span class="d-block hero__title--accent"><?= esc($hero['headline']['line2'] ?? '') ?></span>
+            <span class="d-block accent"><?= esc($hero['headline']['line2'] ?? '') ?></span>
           </h1>
 
           <p class="hero-section__status mb-0"><?= esc($hero['statusText'] ?? '') ?></p>
