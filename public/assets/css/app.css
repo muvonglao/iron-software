@@ -400,7 +400,7 @@ p {
   position: absolute;
   right: calc((min(100vw, 1600px) - 253.2%) / -2);
   top: -330px;
-  left: -157px;
+  left: -150px;
   z-index: 4;
   pointer-events: none;
 }
@@ -451,6 +451,7 @@ p {
   border: 2px solid var(--c-accent);
   border-radius: 32px;
   overflow: hidden;
+  flex-wrap: nowrap;
 }
 
 .hero-signup__input.form-control {
@@ -489,6 +490,8 @@ p {
   font-size: var(--fs-button);
   line-height: var(--type-button-line);
   font-weight: var(--type-button-weight);
+  white-space: nowrap;
+  flex-shrink: 0;
 }
 
 .hero-signup__input-group > .hero-signup__button.btn,
@@ -577,7 +580,8 @@ p {
 }
 
 .product-overview__bullets {
-  margin: 0;
+  margin: 0px;
+  padding: 0px;
   list-style: none;
   display: flex;
   justify-content: space-between;
@@ -617,8 +621,12 @@ p {
 .product-overview__body-wrap::before {
   content: "";
   position: absolute;
-  inset: 0;
-  background: #170617;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  width: 100vw;
+  transform: translateX(-50%);
+  background: #000000;
   opacity: 0.3;
   pointer-events: none;
   z-index: 0;
@@ -814,8 +822,8 @@ p {
 }
 
 .beta-signup__title {
-  font-size: 30px;
-  line-height: 34px;
+  font-size: var(--type-h2-size);
+  line-height: var(--type-h2-line);
   margin-bottom: 24px;
 }
 
@@ -834,6 +842,7 @@ p {
   border-width: 2px;
   border-color: #e7eef0;
   background: #ffffff;
+  flex-wrap: nowrap;
 }
 
 .beta-signup__input {
@@ -857,9 +866,104 @@ p {
   max-width: 186px;
   font-size: var(--fs-button);
   line-height: var(--type-button-line);
+  white-space: nowrap;
+  flex-shrink: 0;
 }
 
 /* Responsive */
+
+/* ---------- Responsive typography tokens ---------- */
+
+@media (max-width: 991.98px) {
+  :root {
+    --fs-h1: 40px;
+    --lh-h1: 46px;
+    --fs-h2: 32px;
+    --lh-h2: 38px;
+    --type-eyebrow-size: 16px;
+    --type-eyebrow-line: 22px;
+  }
+}
+
+@media (max-width: 575.98px) {
+  :root {
+    --fs-h1: 32px;
+    --lh-h1: 38px;
+    --fs-h2: 26px;
+    --lh-h2: 32px;
+    --type-eyebrow-size: 14px;
+    --type-eyebrow-line: 20px;
+    --fs-body: 15px;
+    --lh-body: 24px;
+    --lh-bullets: 22px;
+    --fs-chip: 12px;
+    --lh-chip: 20px;
+    --fs-button: 14px;
+    --lh-button: 17px;
+  }
+
+  .hero-signup__input-group {
+    --hero-signup-input-font-size: 16px;
+    height: 50px;
+  }
+
+  .hero-signup__input.form-control::placeholder {
+    font-size: 11px;
+  }
+
+  .hero-signup__button.btn {
+    width: 130px;
+    min-width: 130px;
+    max-width: 130px;
+    font-size: 12px;
+    padding: 0 12px;
+  }
+
+  .hero-signup__tag {
+    height: 26px;
+    padding: 0 12px;
+  }
+
+  .hero-signup__note-text {
+    font-size: 13px;
+    line-height: 18px;
+  }
+}
+
+@media (max-width: 650.98px) {
+  .hero-section__art-wrap {
+    display: none;
+  }
+}
+
+/* ---------- Responsive layout ---------- */
+
+@media (max-width: 1190px) {
+  .product-overview__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .product-overview__bullets {
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 8px;
+    width: auto;
+  }
+
+  .product-overview__bullet {
+    width: auto;
+    justify-content: flex-start;
+  }
+
+  .product-overview__bullet:not(:last-child) {
+    border-right: 0;
+    padding-right: 0;
+    margin-right: 0;
+  }
+}
 
 @media (max-width: 991.98px) {
   .site-header .navbar {
@@ -884,28 +988,21 @@ p {
   .hero-section__art-wrap {
     position: absolute;
     right: calc((100vw - 100%) / -2);
-    top: -225px;
-    width: 805px;
-    height: 710px;
+    top: -300px;
+    left: 420px;
+    width: 500px;
+    height: 440px;
     margin-top: 0;
   }
 
   .hero-section__art {
-    width: 805px;
-    height: 710px;
+    width: 500px;
+    height: 440px;
     max-width: none;
   }
 
   .hero-signup {
     padding: 30px 0 24px;
-  }
-
-  .hero-signup__title {
-    font-size: 38px;
-  }
-
-  .hero-signup__subtitle {
-    font-size: 26px;
   }
 
   .hero-signup__input-group {
@@ -914,9 +1011,14 @@ p {
     --hero-signup-input-padding-x: 20px;
   }
 
+  .hero-signup__input.form-control::placeholder {
+    font-size: 12px;
+  }
+
   .hero-signup__button.btn {
     margin: 0;
-    padding: 0 20px;
+    padding: 0 16px;
+    font-size: 14px;
   }
 
   .product-overview {
@@ -932,22 +1034,6 @@ p {
     width: 82px;
     height: 82px;
     transform: translate(30%, -52%);
-  }
-
-  .product-overview__bullets {
-    justify-content: flex-start;
-  }
-
-  .product-overview__bullet {
-    width: 100%;
-    padding: 0;
-    margin-bottom: 8px;
-  }
-
-  .product-overview__bullet:not(:last-child) {
-    border-right: 0;
-    padding-right: 0;
-    margin-right: 0;
   }
 
   .product-overview__body-wrap {

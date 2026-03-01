@@ -1,4 +1,4 @@
-<section class="product-overview">
+<section class="product-overview container">
   <div class="container product-overview__container">
     <div class="product-overview__head">
       <h2 class="section-title product-overview__title"><?= esc($productOverview['title'] ?? '') ?></h2>
@@ -13,8 +13,7 @@
         <span class="chip chip--coming-soon product-overview__badge product-overview__badge-text"><?= esc($productOverview['badgeText'] ?? '') ?></span>
       <?php endif; ?>
     </div>
-
-    <ul class="product-overview__bullets container">
+    <ul class="product-overview__bullets">
       <?php foreach (($productOverview['bullets'] ?? []) as $b): ?>
         <li class="product-overview__bullet bullets-line"><?= esc($b) ?></li>
       <?php endforeach; ?>
@@ -22,7 +21,6 @@
   </div>
 
   <div class="product-overview__body-wrap">
-    <div class="container">
       <div class="product-overview__body">
         <?php
         $paragraphs = $productOverview['paragraphs'] ?? [];
@@ -41,5 +39,4 @@
         <?php endforeach; ?>
       </div>
     </div>
-  </div>
 </section>
