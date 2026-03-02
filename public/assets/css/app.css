@@ -404,11 +404,14 @@ p {
   left: -150px;
   z-index: 4;
   pointer-events: none;
+  aspect-ratio: 865 / 770;
+  contain: layout style;
 }
 
 .hero-section__art {
   width: 880px;
-  height: 100%;
+  height: auto;
+  aspect-ratio: 865 / 770;
   object-fit: cover;
   object-position: left center;
 }
@@ -573,6 +576,7 @@ p {
   display: block;
   width: 86px;
   height: 86px;
+  aspect-ratio: 1 / 1;
 }
 
 .product-overview__badge-text {
@@ -647,6 +651,7 @@ p {
   opacity: 0.45;
   pointer-events: none;
   z-index: 1;
+  contain: strict;
 }
 
 .product-overview__body-wrap > .container {
@@ -727,6 +732,7 @@ p {
   opacity: 0.45;
   pointer-events: none;
   z-index: 1;
+  contain: strict;
 }
 
 .early-access > .container {

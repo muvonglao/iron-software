@@ -7,6 +7,9 @@
             class="why__image"
             src="<?= esc($why['image']['src']) ?>"
             alt="<?= esc($why['image']['alt'] ?? '') ?>"
+            width="446"
+            height="354"
+            loading="lazy"
           />
         <?php endif; ?>
       </div>

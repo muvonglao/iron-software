@@ -10,8 +10,9 @@
               class="hero-section__product-logo"
               src="<?= esc($hero['productLogo']['src']) ?>"
               alt="<?= esc($hero['productLogo']['alt'] ?? 'Product logo') ?>"
-              width="200"
-              height="35"
+              width="233"
+              height="40"
+              fetchpriority="high"
             />
           <?php endif; ?>
 
@@ -33,9 +34,11 @@
               <img
                 class="hero-section__art"
                 src="<?= esc($hero['artwork']['backgroundPath']) ?>"
-                alt="<?= esc($hero['artwork']['alt'] ?? 'Artwork') ?>"
-                width="520"
-                height="400"
+                alt=""
+                aria-hidden="true"
+                width="865"
+                height="770"
+                loading="lazy"
               />
             </div>
           <?php endif; ?>

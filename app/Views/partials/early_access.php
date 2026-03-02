@@ -27,6 +27,9 @@
               class="early-access__chip-logo"
               src="<?= esc($chip['logo']['src']) ?>"
               alt="<?= esc($chip['logo']['alt'] ?? '') ?>"
+              width="113"
+              height="40"
+              loading="lazy"
             />
           <?php endif; ?>
         </div>

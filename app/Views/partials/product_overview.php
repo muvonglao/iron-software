@@ -8,6 +8,8 @@
           class="product-overview__badge"
           src="<?= esc($badgeImage['src']) ?>"
           alt="<?= esc($badgeImage['alt'] ?? ($productOverview['badgeText'] ?? 'Coming soon')) ?>"
+          width="86"
+          height="86"
         />
       <?php else: ?>
         <span class="chip chip--coming-soon product-overview__badge product-overview__badge-text"><?= esc($productOverview['badgeText'] ?? '') ?></span>
