@@ -50,7 +50,7 @@ public/
 
 ```bash
 # 1. Clone the repository
-git clone <repo-url> iron-software
+git clone git@github.com:muvonglao/iron-software.git
 cd iron-software
 
 # 2. Install dependencies
