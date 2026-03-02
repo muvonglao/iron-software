@@ -108,7 +108,7 @@ The project uses **four custom breakpoints** (not standard Bootstrap tiers):
 
 ## Evidence from Codebase
 
-All checklist values were cross-referenced against the repository source files:
+All technical values in this checklist were validated against the repository source files.
 
 - **Typography tokens** — `--fs-h1`, `--fs-h2`, `--fs-body`, `--fs-nav`, `--fs-button`, `--c-accent`, `--text-primary`, and associated weight/line-height variables verified in `public/assets/css/app.css` (`:root` block).
 - **Breakpoints** — Four `@media` rules at `1190px`, `991.98px`, `650.98px`, and `575.98px` verified in `public/assets/css/app.css`.
@@ -116,4 +116,4 @@ All checklist values were cross-referenced against the repository source files:
 - **Performance safeguards** — Explicit `width`/`height` attributes on all `<img>` tags verified in `app/Views/partials/hero.php`, `product_overview.php`, `why.php`, and `early_access.php`. `fetchpriority="high"` confirmed on the hero product logo in `app/Views/partials/hero.php`.
 - **Font loading strategy** — `preload` + `media="print" onload` pattern with `<noscript>` fallback and `&display=swap` verified in `app/Views/layouts/default.php`.
 - **Script loading** — Bootstrap JS bundle and `app.js` both loaded with `defer` at end of `<body>` in `app/Views/layouts/default.php`.
-- **Asset strategy** — All files in `public/assets/img/` are SVG (8 files, no WebP or raster images present).
+- **Asset strategy** — All files in `public/assets/img/` are SVG (8 files, no WebP or raster images present). SVG was intentionally chosen to minimize raster payload and eliminate image-related CLS risk.
