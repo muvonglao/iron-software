@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title><?= esc($title ?? 'Iron Software - Technical Test') ?></title>
-  <meta name="description" content="<?= esc($metaDescription ?? 'CodeIgniter 4 + Bootstrap landing page implementation.') ?>">
+  <title>Iron Software — Technical Challenge (Landing Page Implementation)</title>
+  <meta name="description" content="Technical challenge implementation of the IronPDF for C++ landing page using CodeIgniter 4 and Bootstrap.">
 
   <!-- Google Fonts (non-render-blocking with preload) -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -20,9 +20,10 @@
   <link rel="icon" href="/favicon.ico" type="image/svg+xml">
 
   <!-- Open Graph -->
-  <meta property="og:title" content="<?= esc($title ?? 'Iron Software') ?>">
-  <meta property="og:description" content="<?= esc($metaDescription ?? '') ?>">
   <meta property="og:type" content="website">
+  <meta property="og:title" content="Iron Software Technical Challenge — Landing Page Implementation">
+  <meta property="og:description" content="Technical challenge implementation for hiring evaluation purposes.">
+  <!-- og:image intentionally omitted to avoid brand impersonation -->
 
   <!-- Custom CSS -->
   <link rel="stylesheet" href="/assets/css/app.css">

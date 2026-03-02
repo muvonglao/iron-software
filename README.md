@@ -129,3 +129,5 @@ See [QA_CHECKLIST.md](QA_CHECKLIST.md) for a comprehensive quality assurance che
 - Lighthouse audit targets
 - Accessibility compliance
 - CodeIgniter implementation review
+
+**Note:** This project is a technical challenge implementation and is not affiliated with or endorsed by Iron Software.
