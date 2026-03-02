@@ -1,28 +1,28 @@
 :root {
-  /* ---------- Typography: Font family ---------- */
+  /* Font family */
   --font-sans:
     "Montserrat", system-ui, -apple-system, "Segoe UI", Roboto, Arial,
     sans-serif;
 
-  /* ---------- Typography: Font weights ---------- */
+  /* Font weights */
   --fw-light: 300;
   --fw-regular: 400;
   --fw-medium: 500;
   --fw-bold: 700;
   --fw-black: 800;
 
-  /* ---------- Typography: Font sizes ---------- */
+  /* Font sizes */
   --fs-nav: 11px;
 
   --fs-chip: 14px;
 
-  --fs-body: 16px; /* paragraphs + bullets base */
-  --fs-button: 16px; /* button label */
+  --fs-body: 16px;
+  --fs-button: 16px;
 
-  --fs-h1: 50px; /* Hero H1 (Beta Software Program) */
-  --fs-h2: 40px; /* Section headings (e.g., IronPDF for C++, Why..., Early Access...) */
+  --fs-h1: 50px;
+  --fs-h2: 40px;
 
-  /* ---------- Typography: Line heights ---------- */
+  /* Line heights */
   --lh-nav: 13px;
   --lh-chip: 28px;
   --lh-body: 28px;
@@ -31,14 +31,14 @@
   --lh-h1: 54px;
   --lh-h2: 44px;
 
-  /* ---------- Colors ---------- */
+  /* Colors */
   --c-white: #ffffff;
-  --c-accent: #c6aac6; /* purple highlight text */
-  --c-released: #331433; /* chip released text color */
+  --c-accent: #c6aac6;
+  --c-released: #331433;
 
-  /* Optional: page foundation (tune later in pixel step) */
-  --c-bg: #2c0f29; /* safe placeholder background */
-  --c-surface: #331433; /* safe surface tone */
+  /* Page foundation */
+  --c-bg: #2c0f29;
+  --c-surface: #331433;
   --c-signup-grad-start: #8e608e;
   --c-signup-grad-mid: #402640;
   --c-signup-grad-end: #371a34;
@@ -50,11 +50,11 @@
   --c-chip-fill: rgba(23, 6, 23, 0.8);
   --c-overlay-base: #170617;
 
-  /* ---------- Text color tokens ---------- */
+  /* Text color tokens */
   --text-primary: var(--c-white);
   --text-accent: var(--c-accent);
 
-  /* ---------- Type tokens (semantic) ---------- */
+  /* Type tokens (semantic) */
   /* Nav link */
   --type-nav-font: var(--font-sans);
   --type-nav-size: var(--fs-nav);
@@ -62,10 +62,10 @@
   --type-nav-weight: var(--fw-bold);
   --type-nav-color: var(--text-primary);
 
-  /* Hero eyebrow (Building on the success...) */
+  /* Hero eyebrow */
   --type-eyebrow-font: var(--font-sans);
-  --type-eyebrow-size: 18px; /* from your earlier screenshot */
-  --type-eyebrow-line: 26px; /* from your earlier screenshot */
+  --type-eyebrow-size: 18px;
+  --type-eyebrow-line: 26px;
   --type-eyebrow-weight: var(--fw-bold);
   --type-eyebrow-color: var(--text-primary);
 
@@ -115,13 +115,11 @@
   --type-chip-color-coming-soon: var(--c-coming-soon-text);
   --type-chip-color-released: var(--c-released);
 
-  /* ---------- Layout ---------- */
+  /* Layout */
   --layout-max-width: 1190px;
 }
 
-/* =========================
-   Practical base hooks
-   ========================= */
+/* Practical base hooks */
 
 html,
 body {
@@ -152,9 +150,7 @@ a {
   text-decoration: none;
 }
 
-/* =========================
-   Base Typography Mapping
-   ========================= */
+/* Base Typography Mapping */
 
 /* Body text */
 
@@ -192,7 +188,7 @@ p {
   color: var(--type-bullets-color);
 }
 
-/* Buttons (ถ้าใช้ bootstrap .btn) */
+/* Buttons (if using bootstrap .btn) */
 .btn,
 .btn .btn__label {
   font-family: var(--type-button-font);
@@ -429,7 +425,7 @@ p {
 }
 
 .hero-signup__title {
-  margin-bottom: 1rem; /* was mb-3 */
+  margin-bottom: 1rem;
 }
 
 .hero-signup__subtitle {
@@ -437,11 +433,11 @@ p {
   line-height: var(--type-eyebrow-line);
   font-weight: var(--type-eyebrow-weight);
   color: var(--type-eyebrow-color);
-  margin-bottom: 1.5rem; /* was mb-4 */
+  margin-bottom: 1.5rem;
 }
 
 .hero-signup__form {
-  margin-bottom: 1.5rem; /* was mb-4 */
+  margin-bottom: 1.5rem;
 }
 
 .hero-signup__input-group {
@@ -883,7 +879,7 @@ p {
 
 /* Responsive */
 
-/* ---------- Responsive typography tokens ---------- */
+/* Responsive typography tokens */
 
 @media (max-width: 991.98px) {
   :root {
@@ -984,7 +980,7 @@ p {
   }
 }
 
-/* ---------- Responsive layout ---------- */
+/* Responsive layout */
 
 @media (max-width: 1190px) {
   .product-overview__container {
