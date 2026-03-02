@@ -70,11 +70,11 @@ Open **http://localhost:8080** in your browser.
 
 ## Lighthouse Results
 
-Audited using **Chrome DevTools → Lighthouse** with default throttling presets.
+Audited locally using **Chrome DevTools → Lighthouse** with default throttling presets
 
 ### Desktop
 
-- Performance: 99
+- Performance: 100
 - Accessibility: 97
 - Best Practices: 96
 - SEO: 92
@@ -86,7 +86,7 @@ Audited using **Chrome DevTools → Lighthouse** with default throttling presets
 - Best Practices: 96
 - SEO: 92
 
-> **Note:** Lighthouse reports _lab data_ collected under simulated conditions. Real-world (field) performance may vary depending on network, device, and browser configuration.
+> **Note:** Lighthouse reports _lab data_ collected under simulated conditions. Scores may vary between local and production environments depending on hosting infrastructure, network conditions, device performance, and browser configuration.
 
 ## Design Decisions
 
