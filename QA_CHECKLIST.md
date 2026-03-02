@@ -58,6 +58,8 @@
 
 ## 6. Core Web Vitals & Performance
 
+> Note: Metrics below are validated via **Lighthouse (lab simulation)**. Field (real-user) metrics may vary depending on device/network.
+
 - [ ] **LCP** < 2.5 s (hero artwork / H1 text)
 - [ ] **CLS** < 0.1 — images have explicit `width`/`height`
 - [ ] **INP / FID** — minimal JS, no blocking scripts
