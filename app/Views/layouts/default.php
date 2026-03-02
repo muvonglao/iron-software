@@ -33,7 +33,7 @@
 
 <?= $this->renderSection('content') ?>
 
-<!-- Bootstrap JS (CDN) – only collapse + dropdown used; defer to reduce TBT -->
+<!-- Bootstrap JS (CDN) -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" defer></script>
 
 <!-- Custom JS -->

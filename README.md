@@ -105,6 +105,17 @@ Audited using **Chrome DevTools → Lighthouse** with default throttling presets
 - **Assets:** All design assets are served as **SVG**, eliminating raster payloads entirely and improving LCP, CLS, and overall page weight.
 - **Lab vs. field data:** Lighthouse provides _lab_ measurements under simulated throttling. Field metrics (via CrUX or RUM) may differ based on end-user network conditions, hardware, and browser behaviour.
 
+## Deployment
+
+The project is deployed on **Render** as a Web Service using a Docker runtime.
+
+- Runtime: Docker
+- Document root: `/public`
+- No additional environment variables required
+
+Live URL:
+https://iron-software.onrender.com/
+
 ## QA Checklist
 
 See [QA_CHECKLIST.md](QA_CHECKLIST.md) for a comprehensive quality assurance checklist covering:
