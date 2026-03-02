@@ -76,6 +76,7 @@
 
   "why": {
     "title": "Why make a C++ PDF Library",
+    "titleHighlight": "C++ PDF Library",
     "image": {
       "src": "/assets/img/html-to-pdf.webp",
       "alt": "HTML to PDF flow icons"

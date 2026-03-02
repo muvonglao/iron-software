@@ -10,6 +10,8 @@
               class="hero-section__product-logo"
               src="<?= esc($hero['productLogo']['src']) ?>"
               alt="<?= esc($hero['productLogo']['alt'] ?? 'Product logo') ?>"
+              width="200"
+              height="35"
             />
           <?php endif; ?>
 
@@ -32,6 +34,8 @@
                 class="hero-section__art"
                 src="<?= esc($hero['artwork']['backgroundPath']) ?>"
                 alt="<?= esc($hero['artwork']['alt'] ?? 'Artwork') ?>"
+                width="520"
+                height="400"
               />
             </div>
           <?php endif; ?>
@@ -47,7 +51,7 @@
           <h2 class="hero-signup__title"><?= esc($signup['title'] ?? '') ?></h2>
           <p class="hero-signup__subtitle"><?= esc($signup['subtitle'] ?? '') ?></p>
 
-          <form class="hero-signup__form" action="#" method="post">
+          <form class="hero-signup__form" action="#" method="post" aria-label="Sign up for early access">
             <label class="visually-hidden" for="email-hero">Email address</label>
             <div class="input-group hero-signup__input-group">
               <input

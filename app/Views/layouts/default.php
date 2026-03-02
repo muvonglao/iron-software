@@ -14,10 +14,20 @@
   <!-- Bootstrap CSS (CDN) -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
 
+  <!-- Favicon -->
+  <link rel="icon" href="/favicon.ico" type="image/svg+xml">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="<?= esc($title ?? 'Iron Software') ?>">
+  <meta property="og:description" content="<?= esc($metaDescription ?? '') ?>">
+  <meta property="og:type" content="website">
+
   <!-- Custom CSS -->
   <link rel="stylesheet" href="/assets/css/app.css">
 </head>
 <body>
+
+<a class="visually-hidden-focusable" href="#main-content">Skip to main content</a>
 
 <?= $this->renderSection('content') ?>
 

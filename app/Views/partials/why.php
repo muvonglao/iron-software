@@ -13,8 +13,8 @@
 
       <div class="why__content">
         <?php $whyTitle = $why['title'] ?? ''; ?>
-        <?php $whyTitleHighlight = 'C++ PDF Library'; ?>
-        <?php if ($whyTitle !== '' && strpos($whyTitle, $whyTitleHighlight) !== false): ?>
+        <?php $whyTitleHighlight = $why['titleHighlight'] ?? ''; ?>
+        <?php if ($whyTitle !== '' && $whyTitleHighlight !== '' && strpos($whyTitle, $whyTitleHighlight) !== false): ?>
           <?php $startPos = strpos($whyTitle, $whyTitleHighlight); ?>
           <?php $before = substr($whyTitle, 0, $startPos); ?>
           <?php $after = substr($whyTitle, $startPos + strlen($whyTitleHighlight)); ?>
