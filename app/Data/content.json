@@ -37,7 +37,7 @@
     "statusText": "Coming soon",
 
     "artwork": {
-      "backgroundPath": "/assets/img/cpp-pdf-hero-artwork-bg.webp",
+      "backgroundPath": "/assets/img/cpp-pdf-hero-artwork-bg.svg",
       "alt": "C++ product artwork"
     },
 
@@ -78,7 +78,7 @@
     "title": "Why make a C++ PDF Library",
     "titleHighlight": "C++ PDF Library",
     "image": {
-      "src": "/assets/img/html-to-pdf.webp",
+      "src": "/assets/img/html-to-pdf.svg",
       "alt": "HTML to PDF flow icons"
     },
     "paragraphs": [
