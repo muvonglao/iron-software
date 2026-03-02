@@ -90,20 +90,19 @@ Audited locally using **Chrome DevTools → Lighthouse** with default throttling
 
 ## Design Decisions
 
-- **No jQuery** — pure vanilla JS for the minimal interactivity required (mobile nav handled by Bootstrap).
-- **Font substitution** — the Figma design uses **Gotham**, a commercial typeface that requires a paid license. To avoid licensing issues, **Montserrat** (Google Fonts, open-source) was chosen as the fallback. Montserrat closely matches Gotham's geometric sans-serif style, weight range, and x-height, making it the most common free alternative.
-- **JSON as data source** — all page content is driven by `content.json`, demonstrating MVC data flow without a database.
-- **`esc()` everywhere** — all dynamic output is escaped to prevent XSS, following CI4 best practices.
-- **Responsive without mobile mockup** — four breakpoints (1190 px, 992 px, 651 px, 576 px) ensure the layout degrades gracefully from desktop to mobile.
-- **Accessibility first** — semantic HTML, ARIA labels, skip-to-content link, visible focus indicators, and sufficient colour contrast.
-- **CLS prevention** — explicit `width`/`height` on images to reserve layout space before load.
+- **No jQuery** — Pure vanilla JavaScript is used for minimal interactivity, while Bootstrap handles the mobile navigation behavior.
+- **Font substitution** — The original Figma design specifies Gotham (a commercial typeface). Montserrat (Google Fonts, open-source) was selected as a close geometric alternative with similar weight coverage and visual characteristics.
+- **JSON as data source** — All page content is driven by `content.json`, demonstrating proper MVC data flow without requiring a database.
+- **Output escaping** — All dynamic output is escaped using `esc()` to prevent XSS vulnerabilities, following CodeIgniter 4 best practices.
+- **Responsive strategy** — Four breakpoints (1190 px, 992 px, 651 px, 576 px) were applied to ensure graceful layout degradation from desktop to mobile.
+- **Accessibility-first approach** — Semantic HTML, ARIA labels where appropriate, skip-to-content link, visible focus indicators, and sufficient color contrast were implemented.
+- **CLS prevention** — Explicit `width` and `height` attributes are defined for images to reserve layout space before load.
 
 ## Assumptions & Notes
 
-- **Typeface licensing:** The Figma design uses _Gotham_ (commercial). This implementation uses **Montserrat** (Google Fonts) to avoid licensing issues.
-- **Environment:** Lighthouse scores can differ between **development** and **production** modes. Production mode disables the debug toolbar and development-only overhead, yielding scores that more accurately reflect real-world performance. For production-like testing, set `CI_ENVIRONMENT = production`.
-- **Assets:** All design assets are served as **SVG**, eliminating raster payloads entirely and improving LCP, CLS, and overall page weight.
-- **Lab vs. field data:** Lighthouse provides _lab_ measurements under simulated throttling. Field metrics (via CrUX or RUM) may differ based on end-user network conditions, hardware, and browser behaviour.
+- **Environment differences** — Lighthouse scores can differ between development and production modes. Production mode disables the debug toolbar and development-only overhead. For performance validation, testing was conducted using `CI_ENVIRONMENT=production`.
+- **Asset strategy** — All design assets are served as SVG to eliminate raster payload overhead and reduce LCP and CLS risks.
+- **Lab vs. field metrics** — Lighthouse provides lab measurements under simulated throttling conditions. Real-world (field) metrics via CrUX or RUM may vary depending on user network conditions, hardware, and browser behavior.
 
 ## Deployment
 
