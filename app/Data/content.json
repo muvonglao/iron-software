@@ -16,14 +16,8 @@
       {
         "label": "PRODUCTS",
         "href": "#",
-        "type": "dropdown",
         "ariaLabel": "Products",
-        "items": [
-          { "label": "IronPDF for C++", "href": "#", "isCurrent": true },
-          { "label": "IronPDF for Java", "href": "#" },
-          { "label": "IronPDF for Python", "href": "#" },
-          { "label": "IronPDF for Node.js", "href": "#" }
-        ]
+        "showCaret": true
       },
       { "label": "ABOUT US", "href": "#", "ariaLabel": "About us" },
       { "label": "CAREER", "href": "#", "ariaLabel": "Career" }

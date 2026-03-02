@@ -52,7 +52,7 @@
               </li>
             <?php else: ?>
               <li class="nav-item site-header__item">
-                <a class="nav-link site-header__link"
+                <a class="nav-link site-header__link<?= !empty($link['showCaret']) ? ' dropdown-toggle' : '' ?>"
                    href="<?= esc($link['href'] ?? '#') ?>"
                    aria-label="<?= esc($link['ariaLabel'] ?? ($link['label'] ?? 'Link')) ?>">
                   <?= esc($link['label'] ?? '') ?>

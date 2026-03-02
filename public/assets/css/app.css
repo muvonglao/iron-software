@@ -902,6 +902,11 @@ p {
     --lh-button: 17px;
   }
 
+  .hero-section__product-logo {
+    width: 160px;
+    margin-bottom: 24px;
+  }
+
   .hero-signup__input-group {
     --hero-signup-input-font-size: 16px;
     height: 50px;
@@ -932,6 +937,11 @@ p {
   .product-overview__bullet {
     font-size: 13px;
     line-height: 20px;
+  }
+
+  .early-access__chip-logo {
+    height: 30px;
+    max-width: 120px;
   }
 
   .beta-signup__input-group {
@@ -998,8 +1008,23 @@ p {
     padding-right: 20px;
   }
 
+  .site-header__container {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
   .site-header .navbar {
     min-height: 72px;
+  }
+
+  .site-header__toggler {
+    border: 0;
+    padding: 4px;
+  }
+
+  .site-header__toggler .navbar-toggler-icon {
+    width: 24px;
+    height: 24px;
   }
 
   .site-header__links {
@@ -1010,6 +1035,16 @@ p {
   .site-header__link {
     padding-left: 0;
     padding-right: 0;
+  }
+
+  .hero-section__product-logo {
+    width: 180px;
+    margin-bottom: 24px;
+  }
+
+  .early-access__chip-logo {
+    height: 34px;
+    max-width: 130px;
   }
 
   .hero-section__container {
